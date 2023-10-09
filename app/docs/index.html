@@ -38,16 +38,6 @@
               
                 
                 <li><a
-                  href='#abortcontroller'
-                  class="">
-                  abortController
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
                   href='#trackwebsitefetch'
                   class="">
                   trackWebsiteFetch
@@ -58,29 +48,9 @@
               
                 
                 <li><a
-                  href='#trackwebsitefetch'
+                  href='#getsiteavailability'
                   class="">
-                  trackWebsiteFetch
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#trackwebsitefetch---tracks-the-website-fetch-event'
-                  class="">
-                  trackWebsiteFetch - Tracks the website fetch event
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#sethaserror'
-                  class="">
-                  setHasError
+                  getSiteAvailability
                   
                 </a>
                 
@@ -141,12 +111,7 @@
 
   <p>Fetches the website and displays it in an iframe</p>
 
-    <div class='pre p1 fill-light mt0'>FetchWebsite</div>
-  
-    <p>
-      Type:
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-    </p>
+    <div class='pre p1 fill-light mt0'>FetchWebsite(param0: any): any</div>
   
   
 
@@ -163,33 +128,10 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>$0</span> <code class='quiet'>({url: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>})</code>
-	    
+            <span class='code bold'>param0</span> <code class='quiet'>(any)</code>
+	    url of the website @type {string}
+
           </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>$0.url</span> <code class='quiet'>any</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-            </tbody>
-          </table>
           
         </div>
       
@@ -231,64 +173,6 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='abortcontroller'>
-      abortController
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>AbortController to abort the fetch request</p>
-
-    <div class='pre p1 fill-light mt0'>abortController</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        void
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
     <h3 class='fl m0' id='trackwebsitefetch'>
       trackWebsiteFetch
     </h3>
@@ -297,7 +181,7 @@
   </div>
   
 
-  <p>Tracks the website fetch event</p>
+  <p>Track website fetch event</p>
 
     <div class='pre p1 fill-light mt0'>trackWebsiteFetch</div>
   
@@ -329,77 +213,6 @@
   
 
   
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        void
-
-      
-    
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-title function_">trackWebsiteFetch</span>(<span class="hljs-string">&quot;https://www.google.com&quot;</span>)</pre>
-    
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='trackwebsitefetch'>
-      trackWebsiteFetch
-    </h3>
-    
-    
-  </div>
-  
-
-  
-    <div class='pre p1 fill-light mt0'>trackWebsiteFetch</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        url - URL of the website to be tracked
-
-      
-    
-  
 
   
 
@@ -424,8 +237,8 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='trackwebsitefetch---tracks-the-website-fetch-event'>
-      trackWebsiteFetch - Tracks the website fetch event
+    <h3 class='fl m0' id='getsiteavailability'>
+      getSiteAvailability
     </h3>
     
     
@@ -434,12 +247,7 @@
 
   <p>Checks if the website is available</p>
 
-    <div class='pre p1 fill-light mt0'>trackWebsiteFetch - Tracks the website fetch event(void: void): any</div>
-  
-    <p>
-      Type:
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
-    </p>
+    <div class='pre p1 fill-light mt0'>getSiteAvailability(void: any): any</div>
   
   
 
@@ -456,7 +264,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>void</span> <code class='quiet'>(void)</code>
+            <span class='code bold'>void</span> <code class='quiet'>(any)</code>
 	    
           </div>
           
@@ -472,71 +280,6 @@
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code>any</code>:
         void
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Throws</div>
-    <ul>
-      
-        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">error</a>: Throws an error if the website is not available
-</li>
-      
-    </ul>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='sethaserror'>
-      setHasError
-    </h3>
-    
-    
-  </div>
-  
-
-  
-    <div class='pre p1 fill-light mt0'>setHasError</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        boolean - Sets the hasError state to true
 
       
     
@@ -573,9 +316,9 @@
   </div>
   
 
-  <p>Home Page of the application</p>
+  <p>Home Page</p>
 
-    <div class='pre p1 fill-light mt0'>Home</div>
+    <div class='pre p1 fill-light mt0'>new Home(void: any): any</div>
   
   
 
@@ -592,7 +335,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>void</span> <code class='quiet'>(void)</code>
+            <span class='code bold'>void</span> <code class='quiet'>(any)</code>
 	    
           </div>
           
@@ -607,7 +350,7 @@
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code>any</code>:
-        Home Page of the application
+        Home Page
 
       
     

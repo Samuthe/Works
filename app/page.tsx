@@ -5,10 +5,11 @@ import "./styles/style.css";
 import mixpanel from "../config/mixpanel";
 import CookieBanner from "./components/CookiesBanner";
 import Link from "next/link";
+import DocxPage from './api-docs/docx';
 
 /**
- * @function FetchWebsite - Fetches the website and displays it in an iframe
- * @type {string} url - URL of the website
+ * @function FetchWebsite
+ * @param param0 url of the website @type {string}
  * @description Fetches the website and displays it in an iframe
  * @returns iframe with the website
  */
@@ -16,32 +17,20 @@ const FetchWebsite = ({ url }: { url: string }) => {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    /**
-     * @class AbortController - A new abortController to abort the fetch request
-     * @description AbortController to abort the fetch request
-     * @returns void
-     */
     const abortController = new AbortController();
 
     /**
-     * @function trackWebsiteFetch - Tracks the website fetch event
+     * Track website fetch event
      * @param url - URL of the website
-     * @description Tracks the website fetch event
-     * @returns void
-     * @example trackWebsiteFetch("https://www.google.com")
      */
     const trackWebsiteFetch = (url: string) => {
       mixpanel.track("Website Fetched", { url });
     };
 
     /**
-     * @function getSiteAvailability - Checks if the website is available and sets the hasError state
+     * @function getSiteAvailability
      * @description Checks if the website is available
-     * @param {void} void
-     * @async - Makes an async request to the website
-     * @throws {error} - Throws an error if the website is not available
-     * @callback getSiteAvailability - Checks if the website is available
-     * @callback trackWebsiteFetch - Tracks the website fetch event
+     * @param {void}
      * @returns void
      */
     const getSiteAvailability = async () => {
@@ -49,14 +38,9 @@ const FetchWebsite = ({ url }: { url: string }) => {
         await fetch(url, { mode: "no-cors", signal: abortController.signal });
         setHasError(false);
 
-        /**
-         * @returns url - URL of the website to be tracked
-         */
+        // Track website fetch event
         trackWebsiteFetch(url);
       } catch (err) {
-        /**
-         * @returns boolean - Sets the hasError state to true
-         */
         setHasError(true);
       }
     };
@@ -87,10 +71,10 @@ const FetchWebsite = ({ url }: { url: string }) => {
 };
 
 /**
- * @class Home - Home Page
- * @description Home Page of the application
- * @param {void} void
- * @returns Home Page of the application
+ * @class Home
+ * @description Home Page
+ * @param {void}
+ * @returns Home Page
  */
 const Home = () => {
   const [url, setUrl] = useState("");
@@ -111,6 +95,7 @@ const Home = () => {
       </div>
       <CookieBanner />
       <Link href="/mySubscription">Go to subscription page</Link>
+      <DocxPage />
     </>
   );
 };
